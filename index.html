@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Football League Explorer</title>
+  <link rel="stylesheet" href="src/styles/style.css" />
+  <link rel="icon" href="data:,">
+</head>
+<body>
+  <header>
+    <h1>Football League Explorer</h1>
+  </header>
+
+  <main>
+    <section class="controls">
+      <div>
+        <label for="leagueSelect">Select a League:</label>
+        <select id="leagueSelect">
+          <option value="39">Premier League</option>
+          <option value="140">La Liga</option>
+          <option value="78">Bundesliga</option>
+          <option value="135">Serie A</option>
+        </select>
+      </div>
+      <div>
+        <label for="seasonSelect" style="margin-left: 20px;">Season:</label>
+        <select id="seasonSelect">
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="teamContainer" class="teams"></section>
+
+    <section id="standingsSection">
+      <h2>Current League Standings</h2>
+      <table id="standingsTable">
+        <caption>League Standings</caption>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Team</th>
+            <th>Points</th>
+            <th>Wins</th>
+            <th>Draws</th>
+            <th>Losses</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <div id="teamModal" class="modal hidden">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTeamName">
+      <span id="closeModal" class="close" role="button" aria-label="Close">&times;</span>
+      <h2 id="modalTeamName"></h2>
+      <p><strong>Stadium:</strong> <span id="modalStadium"></span></p>
+      <p><strong>City:</strong> <span id="modalCity"></span></p>
+      <p><strong>Capacity:</strong> <span id="modalCapacity"></span></p>
+      <p class="fun-fact" id="modalFact"></p>
+    </div>
+  </div>
+
+  <script type="module" src="src/js/app.js" defer></script>
+</body>
+</html>
