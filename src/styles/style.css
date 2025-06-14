@@ -1,7 +1,17 @@
+:root {
+  --color-bg: #153243;
+  --color-surface: #2a435c;
+  --color-panel: #284B63;
+  --color-accent: #FF6B35;
+  --color-text: #ffffff;
+  --color-muted: #B4B8AB;
+  --color-border: #3b4a5a;
+}
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f9f9;
-  color: #222;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   padding: 20px;
   margin: 0;
   overflow-x: hidden;
@@ -10,6 +20,7 @@ body {
 header {
   text-align: center;
   margin-bottom: 1.5rem;
+  color: var(--color-text);
 }
 
 .controls {
@@ -32,36 +43,39 @@ header {
 .controls label,
 .controls select {
   width: 60%;
+  color: var(--color-text);
 }
 
 select {
   padding: 0.5rem;
   font-size: 1rem;
   border-radius: 5px;
-  border: 1px solid #ccc;
-  background-color: white;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-text);
   transition: border-color 0.2s ease;
 }
 
 select:focus {
   outline: none;
-  border-color: #4caf50;
+  border-color: var(--color-accent);
 }
 
 .teams {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
   padding: 0;
 }
 
 .team-card {
-  background: white;
+  background: var(--color-surface);
   border-radius: 8px;
   padding: 1rem;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   animation: fadeIn 0.6s ease-in-out;
+  color: var(--color-text);
 }
 
 .team-card img {
@@ -99,7 +113,7 @@ select:focus {
 }
 
 .modal-content {
-  background: white;
+  background: var(--color-surface);
   padding: 2rem;
   border-radius: 8px;
   width: 95%;
@@ -107,6 +121,7 @@ select:focus {
   text-align: center;
   position: relative;
   animation: fadeIn 0.3s ease;
+  color: var(--color-text);
 }
 
 .close {
@@ -115,12 +130,13 @@ select:focus {
   top: 1rem;
   font-size: 1.5rem;
   cursor: pointer;
+  color: var(--color-accent);
 }
 
 .fun-fact {
   margin-top: 1rem;
   font-style: italic;
-  color: #444;
+  color: var(--color-muted);
 }
 
 #standingsSection {
@@ -138,22 +154,27 @@ select:focus {
   text-align: left;
   overflow-x: auto;
   display: block;
+  background-color: transparent;
+  color: var(--color-text);
 }
 
 #standingsTable thead {
-  background-color: #f4f4f4;
+  background-color: var(--color-panel);
+  color: var(--color-text);
 }
 
 #standingsTable th,
 #standingsTable td {
   padding: 10px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--color-border);
   white-space: nowrap;
+  background-color: var(--color-surface);
+  color: var(--color-text);
 }
 
-
 #standingsTable th {
-  background-color: #f4f4f4;
+  background-color: var(--color-panel);
+  color: var(--color-text);
 }
 
 #standingsTable caption {
@@ -162,7 +183,7 @@ select:focus {
   font-weight: bold;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  color: #333;
+  color: var(--color-accent);
 }
 
 

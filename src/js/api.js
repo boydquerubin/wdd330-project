@@ -7,7 +7,7 @@ const headers = {
   'X-RapidAPI-Host': API_HOST
 };
 
-// Fetch teams by league ID
+// fetch teams by league ID
 export async function fetchTeamsByLeague(leagueId, season = 2024) {
   const url = `${BASE_URL}/teams?league=${leagueId}&season=${season}`;
   try {
@@ -20,7 +20,7 @@ export async function fetchTeamsByLeague(leagueId, season = 2024) {
   }
 }
 
-// Fetch league standings
+// fetch league standings
 export async function fetchStandingsByLeague(leagueId, season = 2024) {
   const url = `${BASE_URL}/standings?league=${leagueId}&season=${season}`;
   try {

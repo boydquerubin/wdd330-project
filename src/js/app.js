@@ -93,7 +93,7 @@ async function loadTrivia() {
   }
 }
 
-// render standings
+// load league standings
 async function loadStandings(leagueId, season) {
   const standings = await fetchStandingsByLeague(leagueId, season);
   const tbody = document.querySelector('#standingsTable tbody');
